@@ -25,24 +25,5 @@
        <div>
     <iframe allow="encrypted-media" "donotallowfullscreen" frameborder="0" scrolling="no" gesture="media" height="640px" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" src="https://hindi1.liveipl2022.xyz/player/" width="100%"></iframe>
   </body>
-<script>
-  (function removeAdvertisementAndBlockingElements () {
-    $('.inRek').remove();
-    $('.mgbox').remove();
-    
-    Array.from(document.getElementsByTagName("img")).forEach(function (e) {
-        if (!e.src.includes(window.location.host)) {
-            e.remove()
-        }
-    });    
-    
-    Array.from(document.getElementsByTagName("div")).forEach(function (e) {
-        var currentZIndex = parseInt(document.defaultView.getComputedStyle(e, null).zIndex);
-        if (currentZIndex > 999) {
-            console.log(parseInt(currentZIndex));
-            e.remove()
-        }
-    });
-})();
-</script>
+<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4104698,document.body||document.documentElement)</script>
 </html>
