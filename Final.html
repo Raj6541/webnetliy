@@ -104,13 +104,28 @@ e.preventDefault(); return false;
 <script src="https://unpkg.com/plyr@3"></script><body 
 </script>
 </head> 
+<style>
+  .logos img{
+       position:absolute;
+       Width:10%;
+       top: 7px;
+    z-index: 10;
+    right: 13px;
+    content: "";
+    height: 60px;
+    width: 175px;
+    }
+    
+  </style> 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> 
 <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
 <body 
 class="dark-mode with-custom-scrollbars with-custom-css-scrollbars">
 
 <video poster=""  controls preload="metadata" style="--plyr-color-main: #FFC312FF;"><source src="https://livepeercdn.com/hls/7062ac8ipatb7asb/index.m3u8" type="application/x-mpegURL"></video>
-
+<div class="logos">
+        <img src="https://telegra.ph/file/69b625a0d86a4d9f838f7.jpg" > 
+       <div>
 
     <!-- Halfmoon JS -->
     <script src="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/js/halfmoon.min.js"></script>
