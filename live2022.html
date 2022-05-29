@@ -1,1 +1,120 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0 , user-scalable=no">
+    <meta name="viewport" content="width=device-width" />
+    <!-- SEO-->
+    <meta name="author" content="RDXHQMOVIES" />
+    <meta name="designer" content="RDXHQMOVIES" />
+    <meta name="description" content="Watch IPL 2022 . No signup required">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <script src="https://kit.fontawesome.com/bf2610f0a2.js" crossorigin="anonymous"></script>
+    <!-- Halfmoon CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/css/halfmoon.min.css" rel="stylesheet" />
+    <title>IPL 2022 Live | RDXHQMOVIES </title>
+    
+<script type="text/javascript">
+ var tryCount = 0;
+ var minimalUserResponseInMiliseconds = 200;
+ function check() { before = new Date().getTime(); debugger; after = new Date().getTime(); if (after - before > minimalUserResponseInMiliseconds) { 
+document.write(" Alert!! Close Developer Tools Now... "); self.location.replace(window.location.protocol + 
+window.location.href.substring(window.location.protocol.length));
+}else{
+before = null; after = null; delete before; delete after;
+}
+setTimeout(check, 100);
+ }
+ check();
+ window.onload = function() { document.addEventListener("contextmenu", function(e){ e.preventDefault();
+}, false);
+document.addEventListener("keydown", function(e) { //document.onkeydown = function(e) { // "I" key if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { 
+disabledEvent(e);
+}
+// "J" key if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { disabledEvent(e);
+}
+// "S" key + macOS if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) { disabledEvent(e);
+}
+// "U" key if (e.ctrlKey && e.keyCode == 85) { disabledEvent(e);
+}
+// "F12" key if (event.keyCode == 123) { disabledEvent(e);
+}
+}, false);
+function disabledEvent(e){ if (e.stopPropagation){ e.stopPropagation();
+} else if (window.event){
+window.event.cancelBubble = true;
+}
+e.preventDefault(); return false;
+}
+ };
+</script> 
+ <script> document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("video");
+  const source = video.getElementsByTagName("source")[0].src;
+  
+  // For more options see: https://github.com/sampotts/plyr/#options
+  // captions.update is required for captions to work with hls.js
+  const defaultOptions = {};
+
+  if (Hls.isSupported()) {
+    // For more Hls.js options, see https://github.com/dailymotion/hls.js
+    const hls = new Hls();
+    hls.loadSource(source);
+
+    // From the m3u8 playlist, hls parses the manifest and returns
+    // all available video qualities. This is important, in this approach,
+    // we will have one source on the Plyr player.
+    hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+
+      // Transform available levels into an array of integers (height values).
+      const availableQualities = hls.levels.map((l) => l.height)
+
+      // Add new qualities to option
+      defaultOptions.quality = {
+        default: availableQualities[0],
+        options: availableQualities,
+        // this ensures Plyr to use Hls to update quality level
+        forced: true,        
+        onChange: (e) => updateQuality(e),
+      }
+
+      // Initialize here
+      const player = new Plyr(video, defaultOptions);
+    });
+    hls.attachMedia(video);
+    window.hls = hls;
+  } else {
+    // default options with no quality update in case Hls is not supported
+    const player = new Plyr(video, defaultOptions);
+  }
+
+  function updateQuality(newQuality) {
+    window.hls.levels.forEach((level, levelIndex) => {
+      if (level.height === newQuality) {
+        console.log("Found quality match with " + newQuality);
+        window.hls.currentLevel = levelIndex;
+      }
+    });
+  }
+});
+</script> </head> <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script> 
+<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+<script src="https://unpkg.com/plyr@3"></script><body 
+</script>
+</head> 
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> 
+<script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+<body 
+class="dark-mode with-custom-scrollbars with-custom-css-scrollbars">
+
+<video poster=""  controls preload="metadata" style="--plyr-color-main: #FFC312FF;"><source src="https://livepeercdn.com/hls/7062ac8ipatb7asb/index.m3u8" type="application/x-mpegURL"></video>
+
+
+    <!-- Halfmoon JS -->
+    <script src="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/js/halfmoon.min.js"></script>
+    <script src="nosource.js"></script> </body>
+<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4104698,document.body||document.documentElement)</script>
+</html>
 
