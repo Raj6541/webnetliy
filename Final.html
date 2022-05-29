@@ -127,6 +127,17 @@ background-size: 100px auto, auto;
     height: 40px;
     width: 120px;
     }
+.plyr__video-wrapper::before {
+position: absolute;
+top: 5px;
+left: 5px;
+z-index: 10;
+content: '';
+height: 30px;
+width: 100px;
+background: url('https://test.png') no-repeat;
+background-size: 100px auto, auto;
+}
     
   </style> 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> 
